@@ -22,6 +22,11 @@ jobs:
       pull-requests: write
       actions: write
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
+        with:
+          egress-policy: audit
+
       - uses: envoyproxy/toolshed/gh-actions/retest@effeefe9b275dc8056f77c0e7b1010c252167d3e # actions-v0.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -64,3 +64,43 @@ updates:
     directory: /tools/src/yamllint
     schedule:
       interval: weekly
+
+  - package-ecosystem: gomod
+    directory: /site
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /site
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /tools/docker/envoy-gateway
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /tools/src/controller-gen
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /tools/src/crd-ref-docs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /tools/src/protoc-gen-go-grpc
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /tools/src/protoc-gen-go
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pip
+    directory: /tools/src/release-notes-docs
+    schedule:
+      interval: daily
