@@ -7,6 +7,9 @@ on:
     paths-ignore:
     - "**/*.png"
 
+permissions:
+  contents: write
+
 jobs:
   latest-release:
     runs-on: ubuntu-22.04
